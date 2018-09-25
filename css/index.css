@@ -1,0 +1,215 @@
+@keyframes rainbow {
+    0% { transform: scale(1); }
+    50% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}
+@keyframes opaciting {
+    0% { opacity: 1; }
+    50% { opacity: .3; }
+    100% { opacity: 1; }
+}
+@keyframes updown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(0.1rem); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes leftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(0.2rem); }
+    100% { transform: translateX(0); }
+}
+@keyframes rightLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-0.2rem); }
+    100% { transform: translateX(0); }
+}
+/* @keyframes hidden {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { display: none; }
+} */
+
+.updonw {
+    animation: 1.5s updown infinite;
+}
+.hidden {
+    /* animation: 1.5s hidden forwards; */
+    display: none !important;
+}
+
+.main {
+    text-align: center;
+    overflow: hidden;
+    height: 100%; 
+    background-size: 100%;
+}
+.move-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 1px);
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* 点击宝箱弹窗 */
+.open {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    -webkit-transition: all .5s;
+    position: relative;
+    transition: all .5s;
+    z-index: 100;
+    text-align: center;
+    border-radius: 0.1481rem;
+    
+}
+.open-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1481rem;
+}
+/* 弹窗-云层 */
+.cloud-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 0.1481rem;
+}
+.cloud-bg-top1 {
+    animation: 3s leftRight infinite;
+    /* width: 7.2rem; */
+    width: 85%;
+    height: 2.787rem;
+    background: url('../img/StartView/Popup_red/img_cloud_1.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -0.3rem;
+    z-index: 3;
+}
+.cloud-bg-top2 {
+    animation: 4s leftRight infinite;
+    width: 105%;
+    height: 2.37rem;
+    background: url('../img/StartView/Popup_red/img_cloud_2.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    z-index: 2;
+}
+.cloud-bg-top3 {
+    animation: 4s updown infinite;
+    width: 103%;
+    height: 3.287rem;
+    background: url('../img/StartView/Popup_red/img_cloud_3.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -0.3rem;
+    z-index: 1;
+}
+.cloud-bg-bottom1 {
+    animation: 4s updown infinite;
+    width: 6.2rem;
+    height: 3.4rem;
+    background: url('../img/StartView/Popup_red/img_cloud_4.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+.cloud-bg-bottom2 {
+    animation: 4s leftRight infinite;
+    width: 6.2963rem;
+    height: 3.6rem;
+    background: url('../img/StartView/Popup_red/img_cloud_5.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.cloud-bg-bottom3 {
+    animation: 4s rightLeft infinite;
+    width: 6.5rem;
+    height: 4rem;
+    background: url('../img/StartView/Popup_red/img_cloud_6.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+.flex {
+    transform: translateY(1.5rem);
+    opacity: 1;
+}
+.open-title {
+    animation: 1.5s rainbow infinite;
+    display: inline-block;
+    width: 6.5463rem;
+    height: 3.6759rem;
+    margin-top: 2.5185rem;
+    background: url('../img/StartView/Popup_red/img_biaoti.png') no-repeat;
+    background-size: contain;
+}
+/* 弹出红包 */
+.open-redBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 1650px; */
+    border-radius: 0.1481rem; 
+}
+.open-redGold {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1481rem;
+}
+.redBox-click {
+    position: absolute;
+    left: 1.55rem; 
+    top: 8rem;
+    width: 7rem;
+    height: 9rem;
+    /* background-color: rgba(0, 0, 0, .7); */
+    z-index: 10;
+} 
+
+/* 关闭弹窗按钮 */
+.open-exit {
+    /* animation: 1.5s rainbow infinite; */
+    display: inline-block;
+    height: 0.9rem;
+    width: 0.9rem;
+    background: url('../img/StartView/Popup_red/icon_close1.png');
+    background-size: 100%;;
+    position: absolute;
+    bottom: -1.25rem;
+    left: 45%;
+    z-index: 9999;
+}
+.black::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .7);
+}

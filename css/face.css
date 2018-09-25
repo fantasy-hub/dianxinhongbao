@@ -1,0 +1,121 @@
+@keyframes rainbow {
+    0% { transform: scale(1); }
+    50% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    /* 50% { transform: rotate(180deg); } */
+    100% { transform: rotate(-360deg); }
+}
+
+.main {
+    position: relative;
+    /* font-family: 'PingFang-SC-Regular'; */
+    width: 100%;
+    height: 100vh;
+    background: url('../img/faceUI/img_bg_ssgw@2x.png') no-repeat;
+    background-size: 100%;
+    color: #79F8FF;
+    text-align: center;
+}
+/* 背景 */
+.bg-card {
+    position: absolute;
+    /* top: 2.3241rem; */
+    bottom: 0.4444rem;
+    width: 100%;
+    height: 14.98rem;
+    background: url('../img/faceUI/img_ssgw_bg_k.png') no-repeat;
+    background-size: 100%;
+}
+.bg-red {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4.972rem;
+    background: url('../img/faceUI/img_ssgw_ding.png') no-repeat;
+    background-size: 100%;
+}
+.bg-line-lf {
+    position: absolute;
+    bottom: 13.1rem;
+    left: 1.4rem;
+    width: 1.166rem;
+    height: 0.092rem;
+    background: url('../img/faceUI/icon_ssgw_zuo.png') no-repeat;
+    background-size: 100%;
+}
+.bg-line-rt {
+    position: absolute;
+    bottom: 13.1rem;
+    right: 1.4rem;
+    width: 1.166rem;
+    height: 0.092rem;
+    background: url('../img/faceUI/icon_ssgw_you.png') no-repeat;
+    background-size: 100%;
+}
+.bg-title {
+    position: absolute;
+    bottom: 12.84rem;
+    left: 3.2407rem;
+    font-family: 'PingFangRegular';
+    font-size: 0.5093rem;
+    line-height: 0.5556rem;
+    color:  rgba(252, 34, 76, 1);
+}
+
+/* 提示信息 */
+.prompt {
+    position: absolute;
+    color: #525A66;
+    bottom: 4.65rem;
+    left: 1.2rem;
+    font-size: .3981rem;
+    line-height: .5648rem;
+    width: 7.6rem;
+    margin: 0 auto;
+    padding-top: .592rem;
+}
+.prompt span {
+    line-height: 1rem;
+}
+/* 识别图像 */
+.face {
+    width: 5.583rem;
+    height: 5.5rem;
+    position: absolute;
+    left: 2.2rem;
+    bottom: 6.25rem;
+   
+}
+.face-ring {
+    animation: 10s rotate infinite linear;
+    position: absolute;
+    width: 5.5833rem;
+    height: 5.5rem;
+    background: url('../img/faceUI/img_ssgw_huan.png') no-repeat;
+    background-size: 100% 100%; 
+}
+ 
+
+.click-photo {
+
+    font-size: .44rem;
+    background-size: 100%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2.1rem;
+    width: 5.8rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 0.0741rem;
+    color: rgba(255, 255, 255, 1);
+    background-image: url('../img/faceUI/Group\ 11@3x.png')
+}
+.click-photo-fs {
+    animation: 1.5s rainbow infinite;
+    background: url('../img/facelayout/btn_kjcl_3%402x.png') no-repeat;
+    background-size: 100%;
+    color: #ee2063;
+}

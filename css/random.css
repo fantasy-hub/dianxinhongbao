@@ -1,0 +1,709 @@
+@font-face {
+    font-family: 'PingFang-SC-Semibold';
+    src: url("../fonts/PingFang-SC/PingFang-SC-Semibold.woff") format("woff");
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body { 
+    height: 100%;
+    font-family: 'PingFang-SC-Semibold';
+}
+body, div, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    display: block;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }  
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes pulsebig {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.2, 1.2, 1.2);
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    25% {
+        -webkit-transform: translate3d(-5%, 2%, 0);
+        transform: translate3d(-5%, 2%, 0);
+    }
+
+    50% {
+        -webkit-transform: translate3d(-10%, 4%, 0);
+        transform: translate3d(-10%, 4%, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-5%, 2%, 0);
+        transform: translate3d(-5%, 2%, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+        visibility: visible;
+    }
+    25%  {
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+}
+
+@keyframes rotateInDownLeft {
+    from {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    25% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+    }
+
+    50% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, 10deg);
+        transform: rotate3d(0, 0, 1, 10deg);
+    }
+    
+    75% {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+    }
+
+    to {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+}
+
+@keyframes tvbg {
+    from {
+        transform: rotate3d(1, 1, 1, 20deg);
+        background-color: darkgrey;
+    }
+    to {
+        transform: rotate3d(1, 1, 1, 20deg);
+        background-color: azure;
+    }
+}
+
+
+@keyframes rotateOutDownRight {
+    from {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+    }
+  
+    to {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: rotate3d(0, 0, 1, -20deg);
+      transform: rotate3d(0, 0, 1, -20deg);
+    }
+}
+
+@keyframes fadeOutLeft-skew {
+    from {
+        opacity: 1;
+        /* -webkit-transform: translate3d(0, -11px, 0); */
+        transform: translate3d(0, -11px, 0);
+    }
+
+    to {
+        opacity: 0;
+
+        /* -webkit-transform: translate3d(-117px, -48px, 0); */
+        transform: translate3d(-117px, -48px, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes flash {
+    from,
+    to {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+}
+
+@keyframes flash-fast {
+    from {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.flash {
+    animation: 1.5s flash infinite;
+
+}
+.flash-fast {
+    animation: 2s flash-fast infinite;
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: .7s;
+}
+.pulseslow {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.pulsebig {
+    animation-name: pulsebig;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.fadeindown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+}
+.slideinright {
+    animation-name: slideInRight;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-timing-function: linear;
+}
+.slideinup {
+    animation-name: slideInUp;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+
+
+
+.ct {
+    display: none;
+    height: 100%;
+}
+.content {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    height: 55%;
+    margin: 0 auto;
+    /* padding: 1.537rem .2685rem .074rem .2592rem; */
+    padding: 0 .2685rem .074rem .2592rem;
+    /* transition: .5s all; */
+}
+.content:before {
+    content: '';
+    display: block;
+    height: 15%;
+}
+.ct .content {
+    background-image: linear-gradient(180deg,rgba(83,13,137,1),rgba(75,10,115,1));
+    background-repeat: no-repeat;
+    /* background-size: 10rem 9.87rem; */
+    background-size: contain;
+    background-position: 0rem 0rem;
+}
+.ct .content-humanhand {
+    display: none;
+}
+/* 背景图定位 */
+.ct .content-bg1 {
+    width: 7.9444rem;
+    height: 5.2407rem;
+    background-image: url('../img/抖音达人/Page\ 1@3x.png');
+    background-repeat: no-repeat;
+    background-size: 7.9444rem 5.2407rem;
+    position: absolute;
+    left: 1.6667rem;
+    top: 0.1852rem;
+    z-index: -1;
+    transition: 1s all;
+}
+.ct .content-bg2 {
+    width: 3.25rem;
+    height: 4.037rem;
+    background-image: url('../img/抖音达人/Oval@3x.png');
+    background-repeat: no-repeat;
+    background-size: 3.25rem 4.037rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.ct .content-bg3 {
+    width: 3.9537rem;
+    height: 6.4907rem;
+    background-image: url('../img/抖音达人/Rectangle\ 12@3x.png');
+    background-repeat: no-repeat;
+    background-size: 3.9537rem 6.4907rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.ct .content-human {
+    position: absolute;
+    top: .4722rem;
+    left: .2592rem;
+    width: 1.6666rem;
+    height: 2.9351rem;
+    background-image: url('../img/抖音达人/Page\ 11@3x.png');
+    background-repeat: no-repeat;
+    background-size: 1.6666rem 2.9351rem;
+}
+.ct .content-humanpack {
+    position: absolute;
+    top: 0.3796rem;
+    left: 0.5556rem;
+    width: 0.8519rem;
+    height: 1.2778rem;
+    background: url('../img/抖音达人/Group\ 38@3x.png') no-repeat; 
+    background-size: 0.8519rem 1.2778rem;
+    animation: 1.5s rotateOutDownRight infinite;
+}
+.content-wrap {
+    background-image: url('../img/抖音达人/Group\ 16@3x.png');
+    background-repeat: no-repeat;
+    background-size: 9.4722rem 8.2592rem;
+    width: 9.4722rem;
+    /* height: 8.2592rem; */
+    /* height: 47%; */
+    padding: .7962rem .9722rem .8148rem .9814rem;
+}
+.ct .content-img {
+    background-image: url('../img/抖音达人/Bitmap1@3x.png');
+    background-repeat: no-repeat;
+    background-size: 7.5185rem 4.2037rem;
+    height: 4.2037rem;
+    margin: 0 auto;
+}
+.ct .content-h {
+
+    font-family: 'PingFangSC-Semibold';
+    font-size: .5925rem;
+    color: rgba(185,109,219,1);
+    line-height: .8333rem;
+    text-align: center;
+    padding-top: .2777rem;
+}
+.ct .content-btngroup {
+
+    font-family: 'PingFangSC-Semibold'; 
+    display: flex;
+    justify-content: space-between;
+    padding-top: .4629rem;
+    font-size: .3148rem;
+    color:rgba(255,255,255,1);
+    line-height: .4444rem;
+}
+.ct .content-btngroup li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1759rem;
+    height: .8703rem;
+    background-image: url('../img/抖音达人/Rectangle\ 4 Copy\ 3@3x.png');
+    background-repeat: no-repeat;
+    background-size: 2.1759rem .8703rem;     
+}
+
+.footer {
+    position: relative;
+    /* height: 7.9074rem; */
+    height: 45%;
+    margin: 0 auto; 
+    background-color:rgba(255,255,255,1);
+    overflow: hidden;
+}
+.ct .footer-bg1 {
+    width: 100%;
+    height: 2.4444rem;
+    /* height: 45%; */
+    position: absolute;
+    bottom: 0;
+    background-image: url('../img/抖音达人/Fill\ 1@3x.png');
+    background-repeat: no-repeat;
+    background-size: 10rem 2.4444rem;
+    overflow: hidden;
+    animation-delay: 1.2;
+}
+.ct .footer-bg2 {
+    width: 100%;
+    height: 1.8333rem;
+    position: absolute;
+    bottom: 0;
+    background-image: url('../img/抖音达人/Fill\ 3@3x.png');
+    background-repeat: no-repeat;
+    background-size: 10rem 1.8333rem;
+    overflow: hidden;
+    animation-delay: .8s;
+}
+.ct .footer-bg3 {
+    width: 100%;
+    height: 1.3611rem;
+    position: absolute;
+    bottom: 0;
+    background-image: url('../img/抖音达人/Fill\ 7@3x.png');
+    background-repeat: no-repeat;
+    background-size: 10rem 1.3611rem;
+    overflow: hidden;
+}
+.footer-text {
+    opacity: 0;
+    animation: fadeInRight;
+    animation-duration: 1.5s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    transition: .5s all;
+}
+.ct .footer-text .icon {
+    position: absolute;
+    left: .6296rem;
+    top: 3.787rem;
+    width: 1.0185rem;
+    height: 1.324rem;
+    background-image: url('../img/抖音达人/Group\ 8@3x.png');
+    background-repeat: no-repeat;
+    background-size: 1.0185rem 1.324rem;
+}
+.ct .footer-text .text {
+    position: absolute;
+    left: 1.7129rem;
+    top: 4.8703rem;
+    width: 2.5833rem;
+    height: .3518rem;
+    background-image: url('../img/抖音达人/随时随地刷抖音@3x.png');
+    background-repeat: no-repeat;
+    background-size: 2.5833rem .3518rem;
+}
+.close {
+    width: .5555rem;
+    height: .5555rem;
+    position: absolute;
+    top: .3703rem;
+    left: 9.074rem;
+    z-index: 1;
+}
+.close img {
+    width: 100%;
+    height: auto;
+}
+.footer-codect {
+    opacity: 0;
+    animation: fadeInRight 1s;
+    animation-delay: 4.5s;
+    /* animation-timing-function: ease-out; */
+    animation-fill-mode: forwards;
+    transition: .5s all;
+    width: 4.8148rem;
+    height: 4.1111rem;
+    position: absolute;
+    top: .6111rem;
+    left: .8611rem;
+    padding: .6666rem 1.3703rem .6666rem .6666rem;
+    background-image: url('../img/抖音达人/Combined\ Shape@3x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-codect img {
+    width: 100%;
+}
+.footer-robot {
+    position: absolute;
+    left: 1rem;
+    top: -3.6297rem;
+    overflow: hidden;
+}
+#robot {
+    width: 14.1944rem;
+    height: 14.7314rem;
+    background-color: transparent;
+}
+
+
+/* 样式2 */
+.ct.ct2 .content-humanpack {
+    display: none;
+}
+.ct.ct2 .content {
+    background-image: linear-gradient(180deg,rgba(121,179,228,1),rgba(197,227,254,1));
+}
+.ct.ct2 .content-bg1 {
+    background-image: url('../img/商务精英/2@3x.png');
+}
+.ct.ct2 .content-bg2 {
+    background-image: url('../img/商务精英/Oval@3x.png');
+}
+.ct.ct2 .content-bg3 {
+    background-image: url('../img/商务精英/Rectangle\ 12@3x.png');
+}
+.ct.ct2 .content-human {
+    background-image: url('../img/商务精英/Page\ 1@3x.png');
+}
+.ct.ct2 .content-humanhand {
+    display: block;
+    background: url('../img/商务精英/Group\ 6@3x.png') no-repeat;
+    background-size: 0.9259rem 1.4722rem;
+    width: 0.9259rem;
+    height: 1.4722rem;
+    position: absolute;
+    top: 0.4537rem;
+    left: 0.963rem;
+    animation-name: rotateInDownLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.ct.ct2 .content-img {
+    background-image: url('../img/商务精英/Group\ 28@3x.png');
+}
+.ct.ct2 .content-h {
+    color: rgba(109, 180, 219, 1);
+}
+.ct.ct2 .content-btngroup li {
+    background-image: url('../img/商务精英/Rectangle\ 4 Copy\ 3@3x.png');
+}
+.ct.ct2 .footer-bg1 {
+    background-image: url('../img/商务精英/Fill\ 1@3x.png');
+}
+.ct.ct2 .footer-bg2 {
+    background-image: url('../img/商务精英/Fill\ 3@3x.png');
+}
+.ct.ct2 .footer-bg3 {
+    background-image: url('../img/商务精英/Group\ 16@3x\ .png')
+}
+.ct.ct2 .footer-codect {
+    background-image: url('../img/商务精英/Combined\ Shape@3x.png');
+}
+.ct.ct2 .footer-text .icon {
+    background-image: url('../img/商务精英/Group\ 8@3x.png');
+}
+.ct.ct2 .footer-text .text {
+    background-image: url('../img/商务精英/img_word_guijinshu@3x.png');
+}
+
+
+/* 样式3 */
+.ct.ct3 .content-humanpack {
+    display: none;
+}
+.ct.ct3 .content {
+    background-image: linear-gradient(180deg,rgba(228,182,121,1),rgba(244,158,69,1));
+}
+.ct.ct3 .content-bg1 {
+    background-image: url('../img/看剧女王/Bitmap@3x.png');
+}
+.ct.ct3 .content-bg2 {
+    background-image: url('../img/看剧女王/Oval@3x.png');
+}
+.ct.ct3 .content-bg3 {
+    background-image: url('../img/看剧女王/Rectangle 12@3x.png');
+}
+.ct.ct3 .content-wrap {
+    background-image: url('../img/看剧女王/Rectangle\ 4@3x.png');
+}
+.ct.ct3 .content-human {
+    background-image: url('../img/看剧女王/Page\ 1@3x.png');
+    background-size: 3.2037rem 2.324rem;
+    width: 3.2037rem;
+    height: 2.324rem;
+}
+/* .ct.ct3 .content-humanhand {
+    display: block;
+    background-color: grey;
+    background-size: 200px 150px;
+    width: 150px;
+    height: 100px;
+    border: 5px solid black;
+    position: absolute;
+    top: 45px;
+    left: 298px;
+    animation-name: tvbg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+} */
+.ct.ct3 .content-img {
+    background-image: url('../img/看剧女王/Group\ 25@3x.png');
+}
+.ct.ct3 .content-h {
+    color: rgba(109, 180, 219, 1);
+}
+.ct.ct3 .content-btngroup li {
+    background-image: url('../img/看剧女王/Rectangle\ 4 Copy\ 3@3x.png')
+}
+.ct.ct3 .footer-bg1 {
+    background-image:  url('../img/看剧女王/Group\ 27@3x.png');
+}
+.ct.ct3 .footer-bg2 {
+    background-image: url('../img/看剧女王/Group\ 29@3x.png');
+}
+.ct.ct3 .footer-bg3 {
+    background-image: url('../img/看剧女王/Group\ 33@3x.png');
+}
+.ct.ct3 .footer-codect {
+    background-image: url('../img/看剧女王/Combined Shape@3x.png');
+}
+.ct.ct3 .footer-text .icon {
+    background-image: url('../img/看剧女王/Group\ 8@3x.png');
+}
+.ct.ct3 .footer-text .text {
+    background-image: url('../img/看剧女王/Group\ 23@3x.png');
+}
+.ct.ct3 .content-light {
+    position: absolute;
+    top: 0;
+}
+.ct.ct3 .light-1 {
+    position: absolute;
+    top: 0.7037rem;
+    left: 1.9167rem;
+    width: 1.1759rem;
+    height: 0.037rem;
+    transform: rotate3d(1,1,1,21deg);
+    /* opacity: 0; */
+    /* background-color: red; */
+}
+.ct.ct3 .light-2 {
+    position: absolute;
+    top: 0.9352rem;
+    left: 1.8796rem;
+    width: 1.1481rem;
+    height: 0.0463rem;
+    transform: rotate3d(1,1,1,9deg);
+    /* opacity: 0; */
+    /* background-color: yellow; */
+}
+.ct.ct3 .light-3 {
+    position: absolute;
+    top: 1.2222rem;
+    left: 1.8796rem;
+    width: 1.1481rem;
+    height: 0.0278rem;
+}
